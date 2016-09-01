@@ -1,32 +1,51 @@
-<div id="page-content">
-	<div class="cont932">
-	<div id="journal-articles-block">
-		<div class="journal-article">
-			<div class="journal-post-info">
-				<div class="journal-cat-box">
-				{% assign categories_list = page.categories %}
-				{% assign category = categories_list.first %}
-				{% include themes/Snail/category.html %}
-				{% assign categories_list = nil %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include themes/Snail/head.html %}
+</head>
+<body>
+	<noscript>
+		&amp;lt;div id="no-js"&amp;gt;Please enable JavaScript in your browser to experience {{ HOME_PATH }} fully&amp;lt;/div&amp;gt;
+	</noscript>
+    <div id="page-container">
+		<div>
+			{% include themes/Snail/nav.html %}
+			<div class="clearboth pagebottom"></div>
+		</div>
+
+        <div class="page-title-inline">
+            {% if page.group == 'home' %}
+            <h1>{{ site.title }} </h1>
+            {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+            {% else %}
+            <h1>{{ page.title }} </h1>
+            {% if page.author %}<h2> by {{ page.author }}</h2>{% endif %}
+            {% endif %}
+        </div>
+
+		<div class="cont932">
+			<hr style="margin-top: 0;">
+			<div id="journal-articles-block">
+				<div class="journal-article">
+					<div class="journal-body">
+						<span class="the-article">
+						{{ content }}
+						</span>
+						<div class="journal-date">Published {{ page.date | date_to_long_string }}</div>
+						<div class="journal-tags">
+						{% assign tags_list = page.tags %}
+						{% include themes/Snail/tags_list %}
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="journal-body">
-				<h1 class="journal-title">{{ page.title }}<span class="author">{% if page.tagline %}{{page.tagline}}{% endif %}</span>
-				</h1>
-				<span class="the-article">
-				{{ content }}
-				</span>
-				<div class="journal-date">Published {{ page.date | date_to_long_string }}</div>
-				<div class="journal-tags">
-				{% assign tags_list = page.tags %}
-				{% include themes/Snail/tags_list %}
-				</div>
+				<div class="clearboth"></div>
 			</div>
 		</div>
-		<div class="clearboth"></div>
+
+        <div class="clearboth"></div>
+
+
 	</div>
-</div>
-	<div class="clearboth"></div>
-	{% include JB/comments %}
-	<div class="clearboth"></div>
-</div>
+	{% include themes/Snail/footer.html %}
+</body>
+</html>

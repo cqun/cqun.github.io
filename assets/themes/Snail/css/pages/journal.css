@@ -80,7 +80,7 @@
 }
 #journal-articles-block .journal-article .journal-body {
 	padding:0 0 15px 0;
-	width:732px;
+	width:inherit;
 	float:left;
 }
 .journal-cat-box {
@@ -209,6 +209,7 @@
 #journal-articles-block {
 	font-size:13px;
 	float:left;
+	margin:auto 5px;
 }
 .individual-journal-item {
 	float:left;
@@ -240,7 +241,7 @@
 	display:block;
 	background:url("../../img/backforward.png");
 	float:left;
-	margin:10px 0 0;
+	margin:10px 5px 0;
 }
 .journal-arrow.ja-forward {
 	background-position:26px 0;

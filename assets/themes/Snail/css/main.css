@@ -94,7 +94,7 @@ nav {
 	height:54px;
 	font-size:14px;
 	background:url("../img/nav-bg.png") no-repeat 7px -30px;
-	margin:0 0 -34px;
+	margin:0 0 -68px;
 	padding:18px 0 34px;
 	-webkit-touch-callout:none;
 	-webkit-user-select:none;
@@ -115,7 +115,7 @@ hr {
 	background:#C9C9C9;
 	outline:0;
 	padding:0;
-	margin:20px 0 0 0;
+	margin:20px 5px 0 5px;
 	border:0;
 	border-bottom:solid #C9C9C9 0px;
 }
