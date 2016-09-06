@@ -7,7 +7,8 @@ tags: [Schema]
 
 程序设计过程中，我们常常用树形结构来表征某些数据的关联关系，如企业上下级部门、栏目结构、商品分类等等，通常而言，这些树状结构需要借助于数据库完成持久化。然而目前的各种基于关系的数据库，都是以二维表的形式记录存储数据信息，因此是不能直接将Tree存入DBMS，设计合适的Schema及其对应的CRUD算法是实现关系型数据库中存储树形结构的关键。
 
-理想中树形结构应该具备如下特征：数据存储冗余度小、直观性强；检索遍历过程简单高效；节点增删改查CRUD操作高效。依据Gijs Van Tulder写的《[Storing Hierarchical Data in a Database](https://www.sitepoint.com/hierarchical-data-database/)》整理了一下，本文将介绍两种树形结构的Schema设计方案：
+理想中树形结构应该具备如下特征：数据存储冗余度小、直观性强；检索遍历过程简单高效；节点增删改查CRUD操作高效。依据Gijs Van Tulder写的《[Storing Hierarchical Data in a Database](https://www.sitepoint.com/hierarchical-data-database/)》整理了一下，本文将介绍三种树形结构的Schema设计方案：
+
 * The Adjacency List Model（“邻接列表模型”或“递归方法”）
 * Route Path（路径法）
 * Modified Preorder Tree Traversal（预排序遍历树算法，基于节点左右值编码的改进方案）
