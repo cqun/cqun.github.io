@@ -33,6 +33,11 @@ blockquote:before,blockquote:after,q:before,q:after {
 	content:'';
 	content:none;
 }
+blockquote{
+	border-left: 0.5em solid #eee;
+	padding: 0 0.5em;
+	color: #888;
+}
 code {
 	padding: .15em .5em;
 	font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
