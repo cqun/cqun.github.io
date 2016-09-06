@@ -9,7 +9,7 @@ markdown: kramdown
   
 # The title and tagline is showed on homepage
 #
-title :  技术资料库
+title :  简约的技术
 tagline: On Cqun.com
 
 gems: [jekyll-paginate]
