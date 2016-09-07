@@ -1,0 +1,42 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+html, body {
+    overflow-x: hidden;
+}
+hr {
+    clear: both;
+    margin-bottom: 0;
+}
+.navbar{
+    border-radius: 0;
+}
+.nav.nav-tabs.nav-stacked.affix {
+    top: 1px;
+}
+img.homeavatar {
+    border-radius: 50%;
+    height: 3em;
+    /* width: 3em; */
+}
+
+a.navbar-brand {
+    padding: 3px 15px;
+    font-size: 1em;
+}
+
+.neotitle {
+    padding-bottom: 1.5em;
+}
+
+.neotitle h1, .neotitle h2 {
+    display: inline;
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    padding: 1em;
+}
+.footer a {
+    margin: 0 0.2em;
+}
