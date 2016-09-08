@@ -82,3 +82,6 @@ a.navbar-brand {
     border-top: 1px solid #eee;
     margin-bottom: 0.5em;
 }
+li {
+    line-height: 1.8em;
+}
