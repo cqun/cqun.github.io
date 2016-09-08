@@ -20,15 +20,15 @@
             </div>
             <hr/>
             <div class="col-md-8 col-xs-12 col-sm-12">
-            {% for category in site.categories %} 
-                <div class="col-md-6 col-xs-12 col-sm-12">
-                <h2 id="{{ category[0] }}-ref">{{ category[0] }}</h2>
-                <ul>
-                {% assign pages_list = category[1] %}
-                {% include themes/Neo/page_list.html %}
-                </ul>
-                </div>
-            {% endfor %}
+									{% for tag in site.tags %} 
+									<div class="col-md-6 col-xs-12 col-sm-12">
+										<h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+										<ul>
+										{% assign pages_list = tag[1] %} 
+										{% include themes/Neo/page_list.html %}
+										</ul>
+									</div>
+									{% endfor %}
             </div>
             <div class="col-md-4 hidden-xs hidden-sm" >
                 {% include themes/Neo/sidebar.html %}
