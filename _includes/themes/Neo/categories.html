@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+{% include themes/Neo/head.html %}
+</head>
+<body>
+	{% include themes/Neo/nav.html %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <div class="neotitle">
+                {% if page.group == 'home' %}
+                <h1>{{ site.title }} </h1>
+                {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+                {% else %}
+                <h1>{{ page.title }} </h1>
+                {% if page.tagline %}<h2>{{ page.tagline }}</h2>{% endif %}
+                {% endif %}
+                </div>
+            </div>
+            <hr/>
+            <div class="col-md-8 col-xs-12 col-sm-12">
+							{% for category in site.categories %} 
+								<div class="col-md-6 col-xs-12 col-sm-12">
+								<h2 id="{{ category[0] }}-ref">{{ category[0] }}</h2>
+								<ul>
+								{% assign pages_list = category[1] %}  
+								{% for node in pages_list %}
+									{% if node.title != null %}
+										{% if group == null or group == node.group %}
+											<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+								</ul>
+								</div>
+							{% endfor %}
+            </div>
+            <div class="col-md-4 hidden-xs hidden-sm" >
+                {% include themes/Neo/sidebar.html %}
+            </div>
+        </div>
+
+    </div>
+	{% include themes/Neo/footer.html %}
+</body>
+</html>
