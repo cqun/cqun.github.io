@@ -1,0 +1,4 @@
+theme :
+  name : Neo
+Snail :
+  about_path : /about.html

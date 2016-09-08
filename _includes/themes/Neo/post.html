@@ -1,0 +1,6 @@
+<div class="pagecontent">
+{{ content }}
+</div>
+{% assign tags_list = page.tags %}
+{% include themes/Neo/tags_list %}
+<div class="pubdateauthor">Published {{ page.date | date_to_long_string }} by {{ page.author }}</div>

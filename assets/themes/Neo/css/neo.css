@@ -1,0 +1,87 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+html, body {
+    overflow-x: hidden;
+}
+hr {
+    clear: both;
+    margin-bottom: 0;
+}
+.navbar{
+    border-radius: 0;
+}
+.nav.nav-tabs.nav-stacked.affix {
+    top: 1px;
+}
+img.homeavatar {
+    border-radius: 50%;
+    height: 3em;
+    /* width: 3em; */
+}
+
+a.navbar-brand {
+    padding: 3px 15px;
+    font-size: 1em;
+}
+
+.neotitle {
+    padding-bottom: 1.5em;
+}
+
+.neotitle h1, .neotitle h2 {
+    display: inline;
+}
+/*页脚*/
+.footer {
+    border-top: 1px solid #ccc;
+    padding: 1em;
+}
+.footer a {
+    margin: 0 0.2em;
+}
+/*侧边栏*/
+.widget {
+    padding: 20px 30px;
+}
+.widget .title {
+    margin-top: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 21px;
+    position: relative;
+}
+.widget .title:after {
+    content: "";
+    width: 90px;
+    height: 1px;
+    background: #428bca;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+
+.tag-cloud a {
+    border: 1px solid #ebebeb;
+    padding: 2px 7px;
+    color: #959595;
+    line-height: 1.5em;
+    display: inline-block;
+    margin: 0 7px 7px 0;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.pagecontent {
+    line-height: 1.8em;
+    padding-top: 1em;
+}
+.pubdateauthor {
+    text-align: right;
+    border-top: 1px solid #eee;
+    margin-bottom: 0.5em;
+}
+li {
+    line-height: 1.8em;
+}

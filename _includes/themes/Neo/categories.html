@@ -1,0 +1,10 @@
+<!--分类页-->
+{% for category in site.categories %} 
+    <div class="col-md-6 col-xs-12 col-sm-12">
+    <h2 id="{{ category[0] }}-ref">{{ category[0] }}</h2>
+    <ul>
+    {% assign pages_list = category[1] %}
+    {% include themes/Neo/page_list.html %}
+    </ul>
+    </div>
+{% endfor %}

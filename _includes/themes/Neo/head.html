@@ -1,0 +1,35 @@
+	<meta charset="utf-8">
+	{% if page.group == 'home' %}
+	<title>{{ site.title }}</title>
+    {% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+	{% else %}
+	<title>{{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+	{% endif %}
+	<meta name="author" content="{{ site.author.name }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/neo.css">
+	<link rel="shortcut icon" href="{{ BASE_PATH }}/favicon.ico">
+	{% if site.auto_loadmore == true %}
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/js/auto_loadmore.js"></script>
+	{% else %}
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/js/loadmore.js"></script>
+	{% endif %}
+	<link rel="stylesheet" href="{{ BASE_PATH }}{{ ASSET_PATH }}/google-code-prettify/prettify.css">
+	<script type="text/javascript" src="{{ BASE_PATH }}{{ ASSET_PATH }}/google-code-prettify/prettify.js"></script>
+	<script type="text/javascript">
+	  $(function(){
+		$("pre code").addClass("prettyprint linenums");
+		prettyPrint();
+	  });
+	</script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">

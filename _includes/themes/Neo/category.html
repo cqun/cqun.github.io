@@ -1,0 +1,15 @@
+<!--分类-侧边栏-->
+<div class="widget">
+	<h4 class="title">分类</h4>
+	<div class="content tag-cloud">
+		{% assign categories_list = site.categories %}
+		{% for category in categories_list %} 
+			{% if category[0] == null %}
+				<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref" title="{{ category }}">{{ category }}</a>
+			{% else %}
+				<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref" title="{{ category[0] }}">{{ category[0] }}</a>
+			{% endif %}
+		{% endfor %}
+		{% assign categories_list = nil %}
+	</div>
+</div>
