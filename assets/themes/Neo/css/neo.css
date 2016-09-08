@@ -61,7 +61,7 @@ a.navbar-brand {
     bottom: -1px;
 }
 
-.widget .tag-cloud a {
+.tag-cloud a {
     border: 1px solid #ebebeb;
     padding: 2px 7px;
     color: #959595;
@@ -71,4 +71,14 @@ a.navbar-brand {
     -webkit-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
+}
+
+.pagecontent {
+    line-height: 1.8em;
+    padding-top: 1em;
+}
+.pubdateauthor {
+    text-align: right;
+    border-top: 1px solid #eee;
+    margin-bottom: 0.5em;
 }
