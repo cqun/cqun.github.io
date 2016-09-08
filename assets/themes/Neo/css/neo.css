@@ -77,6 +77,9 @@ a.navbar-brand {
     line-height: 1.8em;
     padding-top: 1em;
 }
+.pagecontent h2 {
+    margin-top: 0;
+}
 .pubdateauthor {
     text-align: right;
     border-top: 1px solid #eee;
