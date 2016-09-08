@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+{% include themes/Neo/head.html %}
+    <meta name="msvalidate.01" content="58B5911485AC2470371DF5CCDA277DB9" />
+</head>
+<body>
+	{% include themes/Neo/nav.html %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <div class="neotitle">
+                {% if page.group == 'home' %}
+                <h1>{{ site.title }} </h1>
+                {% if site.tagline %}<h2>{{ site.tagline }}</h2>{% endif %}
+                {% else %}
+                <h1>{{ page.title }} </h1>
+                {% if page.tagline %}<h2>{{ page.tagline }}</h2>{% endif %}
+                {% endif %}
+                </div>
+            </div>
+            <hr/>
+            <div class="col-md-8 col-xs-12 col-sm-12">
+                 {% for post in paginator.posts %}
+                <div class="blog-post">
+                    <h2><a href="{{ BASE_PATH}}{{ post.url }}">{{ post.title }}</a></h2>
+                    <p>{{ post.date }}</p>
+                    {% case site.excerpt %}
+                    {% when "truncate_words" %}
+                    <span class="teaser"><p>{{ post.content | strip_html | truncatewords: 20 }}</p></span>
+                    {% when "teaser" %}
+                    <span class="teaser">{{ post.content  | split:'<!--more-->' | first }}</span>
+                    {% when "all" %}
+                    <span class="teaser">{{ post.content }}</span>
+                    {% endcase %}
+                </div>
+                {% endfor %}
+                {% if paginator.next_page  %}
+                <div id="journal-arrows-cont">
+                        <a href="{{ BASE_PATH}}{{ paginator.next_page_path }}" class="journal-arrow ja-forward"></a>
+                </div>
+                {% endif %}
+            </div>
+            <div class="col-md-4 hidden-xs hidden-sm" >
+                {% include themes/Neo/sidebar.html %}
+            </div>
+        </div>
+
+    </div>
+	{% include themes/Neo/footer.html %}
+</body>
+</html>

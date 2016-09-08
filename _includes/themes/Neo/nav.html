@@ -1,0 +1,46 @@
+ <!-- NAVBAR
+    <div class="navbar-wrapper">
+      <div class="container">-->
+        <nav class="navbar navbar-inverse" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ HOME_PATH }}">
+				  <img src="assets/themes/Neo/img/avatar.jpg" class="homeavatar" />
+			  </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+		{% assign pages_list = site.pages %}
+		{% assign group = 'navigation' %}
+		{% for node in pages_list %}
+			{% if node.title != null %}
+				{% if group == null or group == node.group %}
+				{% if page.url == node.url %}
+				<li class="active"><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+				{% else %}
+				<li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+				{% endif %}
+				{% endif %}
+			{% endif %}
+			{% endfor %}
+		{% assign pages_list = nil %}
+		{% assign group = nil %}
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+  <!--     </div>
+    </div>
+ NAVBAR-->
+
+
+
+ 
