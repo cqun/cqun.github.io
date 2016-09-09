@@ -2,7 +2,7 @@
 layout: post
 title: Git分支管理策略
 author: 阮一峰
-tags: [Schema]
+tags: [Git]
 category: Git
 ---
 
