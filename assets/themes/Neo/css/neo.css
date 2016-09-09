@@ -33,12 +33,39 @@ a.navbar-brand {
     display: inline;
 }
 /*页脚*/
-.footer {
-    border-top: 1px solid #ccc;
-    padding: 1em;
+footer {
+    background-color: #333333;
+    color: #d4d4d4;
+    font-size: 14px;
 }
-.footer a {
-    margin: 0 0.2em;
+footer .footerWrap {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.footer_stats {
+    background: #eeeeee;
+    border-top: 1px solid #dddddd;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+footer a {
+    color: #d4d4d4;
+    padding-left: 2em;
+}
+footer h4 {
+    border-bottom: 1px dotted #777;
+    font-size: 1.5em;
+    font-weight: 3em;
+    margin: 0 0 10px;
+    padding-bottom: 10px;
+}
+
+footer .subFooter {
+    color: #d4d4d4;
+    font-size: 12px;
+    padding: 12px 0;
+    background-color: #222;
 }
 /*侧边栏*/
 .widget {
