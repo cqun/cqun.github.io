@@ -6,7 +6,7 @@ My blog based on Jekyll-Bootstrap.
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>
 
-## About excerpt
+## About excerpt 
 
 There are 2 ways of excerpt: "teaser" and "truncate_words" (Configurated in _config.yml).
 
