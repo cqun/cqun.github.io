@@ -6,7 +6,6 @@ html, body {
 }
 hr {
     clear: both;
-    margin-bottom: 0;
 }
 .navbar{
     border-radius: 0;
@@ -102,7 +101,6 @@ footer .subFooter {
 
 .pagecontent {
     line-height: 1.8em;
-    padding-top: 1em;
 }
 .pagecontent img {
     max-width: 100%;
